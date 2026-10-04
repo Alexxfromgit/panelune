@@ -1,0 +1,14 @@
+{
+  "name": "panelune",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Original worlds, one page at a time. A static comic library and portrait reader.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --dist",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=22" }
+}
