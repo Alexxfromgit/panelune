@@ -4,7 +4,7 @@
 
 ## Automated checks
 
-`npm test`: **4 passing suites, 0 failures**.
+`npm test`: **4 passing tests, 0 failures**.
 
 - All six stories have three distinct page assets, descriptive alternatives, and narrative text.
 - All 18 WebP assets are exactly 900 × 1600 (9:16), and each is smaller than 650 KB.
