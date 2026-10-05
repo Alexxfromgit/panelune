@@ -4,7 +4,7 @@ Reviewed against official platform documentation on **5 October 2026**. This is 
 
 ## Boundaries for this collection
 
-The intended audience is adults aged 18 and older. All named principal characters are aged 27–38. The first edition uses romance, emotional conflict, grief, fantasy, and atmospheric suspense. No pilot includes nudity, sex acts, erotic poses, explicit dialogue, sexual violence, graphic injuries, weapons, drugs, gambling, or user-generated material. Each story exposes its content notes and adult character ages before the reader opens.
+The intended audience is adults aged 18 and older. All named principal characters are aged 27–41. The first edition uses romance, emotional conflict, grief, fantasy, and atmospheric suspense. No published chapter includes nudity, sex acts, erotic poses, explicit dialogue, sexual violence, graphic injuries, weapons, drugs, gambling, or user-generated material. Each story exposes its content notes and adult character ages before the reader opens.
 
 Romance is conveyed through companionship, glances, dialogue, and emotional stakes. Artwork is fully clothed. These boundaries apply to covers, promotional assets, reader pages, dialogue, and future episodes alike. The reference websites informed the episode-reader concept only; their characters, scripts, and artwork were not reused.
 

@@ -1,8 +1,10 @@
+import { continuations, newStories } from './chapters.js';
+
 const image = (id, page = 1) => `./assets/${id}${page === 1 ? '' : `-${page}`}.webp`;
 const opening = (id, alt, narration) => ({ image: image(id), alt, kind: 'opening', narration });
 const page = (id, number, alt, captions, split = 50) => ({ image: image(id, number), alt, kind: 'comic', captions, split });
 
-export const stories = [
+const originals = [
   {
     id: 'midnight-observatory', title: 'The Midnight Observatory', shortTitle: 'The Midnight\nObservatory',
     style: 'Webcomic', genre: 'Mystery · Slow-burn romance', label: 'A midnight mystery', accent: '#98bac3',
@@ -24,7 +26,7 @@ export const stories = [
     ]
   },
   {
-    id: 'borrowed-sun', title: 'Borrowed Sun', shortTitle: 'Borrowed\nSun', style: 'Cartoon', genre: 'Fantasy · Romantic comedy',
+    id: 'borrowed-sun', title: 'Borrowed Sun', shortTitle: 'Borrowed\nSun', style: 'Western cartoon', genre: 'Fantasy · Romantic comedy',
     label: 'A little bottled magic', accent: '#f1ba69', tagline: 'A bad day. A borrowed sun. A very unusual neighbor.',
     synopsis: 'June has a failing rooftop café and exactly one sunny afternoon left in the bank. Then her new neighbor Theo offers her a jar of borrowed sunshine. There is only one rule: return it before the real sun notices.',
     styleNote: 'Bold shapes, warm gouache textures, and delightfully elastic expressions. A playful cartoon direction with room for grown-up feelings.',
@@ -43,7 +45,7 @@ export const stories = [
     ]
   },
   {
-    id: 'last-light', title: 'The Last Light', shortTitle: 'The Last\nLight', style: 'Realistic', genre: 'Drama · Coastal mystery',
+    id: 'last-light', title: 'The Last Light', shortTitle: 'The Last\nLight', style: 'Realistic painterly', genre: 'Drama · Coastal mystery',
     label: 'Secrets beneath the surface', accent: '#9daea0', tagline: 'Every lighthouse has a story it refuses to tell.',
     synopsis: 'Iris comes home to sell her father’s lighthouse. But its lamp begins flashing a signal from a ship that vanished decades ago—and Noah, the quiet harbor mechanic, knows more about the message than he should.',
     styleNote: 'Natural proportions, textured brushwork, and film-like light. Painted realism draws you into a world that feels almost within reach.',
@@ -118,6 +120,19 @@ export const stories = [
       ])
     ]
   }
-].map((story, index) => ({ ...story, cover: image(story.id), number: String(index + 1).padStart(2, '0') }));
+];
 
-export const styles = ['All stories', ...stories.map(story => story.style)];
+export const requiredStyles = ['Manhwa semi-real', 'Western cartoon', 'Realistic painterly', 'Anime cel-shade', 'Retro pulp', 'Noir ink'];
+
+export const stories = [...originals, ...newStories].map((story, index) => {
+  const { pages, chapter, continuation, ...details } = story;
+  return {
+    ...details, cover: image(story.id), number: String(index + 1).padStart(2, '0'),
+    episodes: [
+      { id: 'prologue', label: 'Prologue', title: chapter, pages },
+      continuation || continuations[story.id]
+    ]
+  };
+});
+
+export const styles = ['All stories', ...requiredStyles, ...new Set(stories.map(story => story.style).filter(style => !requiredStyles.includes(style)))];

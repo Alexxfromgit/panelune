@@ -4,11 +4,22 @@ Panelune uses a quiet charcoal library with coral accents, warm display typograp
 
 ## Artwork
 
-All 18 original raster illustrations were made with the built-in ImageGen tool. Each story has one opening illustration and two narrative pages, with its opening illustration used as a character and style reference for subsequent pages. The six styles are webcomic, cartoon, painted realism, watercolor, neo-noir, and ligne claire.
+All 46 raster illustrations were made with the built-in ImageGen tool. The original 18 prologue pages are retained; this expansion adds four covers, four new prologue narrative pages, and 20 Episode 1 pages. Each story’s cover serves as the character and style reference for its narrative pages.
+
+| Requested direction | Story | Visual treatment |
+| --- | --- | --- |
+| Manhwa semi-real | After the Rain | Fine ink, refined faces, soft modeled light, realistic adult proportions |
+| Western cartoon | Borrowed Sun | Rounded shapes, warm texture, expressive stylized faces |
+| Realistic painterly | The Last Light | Natural anatomy, textured brushwork, atmospheric coastal light |
+| Anime cel-shade | Skybound Letters | Crisp outlines, graphic color regions, hard-edged shadows |
+| Retro pulp | Sunset Dispatch | Aged paper, halftone printing, ochre/teal/vermilion adventure palette |
+| Noir ink | Blackwater Ledger | Monochrome ink, crosshatching, heavy blacks and stark lighting |
+
+The existing webcomic, watercolor, colored neo-noir, and ligne claire stories remain as four additional directions. Colored neo-noir is not used as a substitute for monochrome Noir ink, and the original webcomic is not relabeled as manhwa.
 
 ImageGen returned images close to 9:16; web delivery assets were mechanically exported to exact **900 × 1600** WebP at quality 86 with `cwebp`. No source artwork from the reference websites was copied. Each prologue has its own original premise and cliffhanger.
 
-Final image prompts are recorded in `artwork-prompts.json`. Human-readable story scripts, caption text, content notes, and cast descriptions live in `src/stories.js`. Characters remain fully clothed adults. Page text is HTML rather than baked into the image, supporting screen readers and future localization.
+Final image prompts are recorded in `artwork-prompts.json`. Human-readable story scripts, caption text, content notes, and cast descriptions live in `src/stories.js` and `src/chapters.js`. Characters remain fully clothed adults. Page text is HTML rather than baked into the image, supporting screen readers and future localization.
 
 ## New artwork contract
 
